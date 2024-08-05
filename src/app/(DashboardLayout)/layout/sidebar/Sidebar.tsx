@@ -1,7 +1,6 @@
 import { useMediaQuery, Box, Drawer } from "@mui/material";
 import Logo from "../shared/logo/Logo";
 import SidebarItems from "./SidebarItems";
-import { Upgrade } from "./Updrade";
 
 interface ItemType {
   isMobileSidebarOpen: boolean;
@@ -37,6 +36,8 @@ const Sidebar = ({
             sx: {
               width: sidebarWidth,
               boxSizing: "border-box",
+              borderTopRightRadius: "20px", 
+              borderBottomRightRadius: "20px", 
             },
           }}
         >
@@ -59,7 +60,6 @@ const Sidebar = ({
               {/* Sidebar Items */}
               {/* ------------------------------------------- */}
               <SidebarItems />
-              <Upgrade />
             </Box>
           </Box>
         </Drawer>
@@ -77,6 +77,8 @@ const Sidebar = ({
         sx: {
           width: sidebarWidth,
           boxShadow: (theme) => theme.shadows[8],
+          borderTopRightRadius: "20px", 
+          borderBottomRightRadius: "20px", 
         },
       }}
     >
@@ -90,7 +92,6 @@ const Sidebar = ({
       {/* Sidebar For Mobile */}
       {/* ------------------------------------------- */}
       <SidebarItems />
-      <Upgrade />
     </Drawer>
   );
 };

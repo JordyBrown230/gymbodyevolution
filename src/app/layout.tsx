@@ -2,6 +2,7 @@
 import { baselightTheme } from "@/utils/theme/DefaultColors";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+import {APIProvider} from '@vis.gl/react-google-maps';
 
 export default function RootLayout({
   children,
@@ -9,6 +10,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+    <APIProvider apiKey={process.env.NEXT_PUBLIC_API_KEY_GOOGLE||''} onLoad={() => console.log('Maps API has loaded.')}>
     <html lang="en">
       <body>
         <ThemeProvider theme={baselightTheme}>
@@ -18,5 +20,6 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
+    </APIProvider>
   );
 }

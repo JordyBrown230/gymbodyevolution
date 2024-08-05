@@ -1,45 +1,77 @@
-'use client'
-import { Grid, Box } from '@mui/material';
+'use client';
+
+import { useEffect } from 'react';
+import { Typography, Box, Container } from '@mui/material';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import 'leaflet/dist/leaflet.css';
 import PageContainer from '@/app/(DashboardLayout)/components/container/PageContainer';
-// components
-import SalesOverview from '@/app/(DashboardLayout)/components/dashboard/SalesOverview';
-import YearlyBreakup from '@/app/(DashboardLayout)/components/dashboard/YearlyBreakup';
-import RecentTransactions from '@/app/(DashboardLayout)/components/dashboard/RecentTransactions';
-import ProductPerformance from '@/app/(DashboardLayout)/components/dashboard/ProductPerformance';
-import Blog from '@/app/(DashboardLayout)/components/dashboard/Blog';
-import MonthlyEarnings from '@/app/(DashboardLayout)/components/dashboard/MonthlyEarnings';
+import Mapa from './components/home/Mapa';
+import Carrousel from './components/home/Carrousel';
+import GoogleReviews from './components/home/Reviews';
+const SamplePage = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
-const Dashboard = () => {
   return (
-    <PageContainer title="Dashboard" description="this is Dashboard">
-      <Box>
-        <Grid container spacing={3}>
-          <Grid item xs={12} lg={8}>
-            <SalesOverview />
-          </Grid>
-          <Grid item xs={12} lg={4}>
-            <Grid container spacing={3}>
-              <Grid item xs={12}>
-                <YearlyBreakup />
-              </Grid>
-              <Grid item xs={12}>
-                <MonthlyEarnings />
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid item xs={12} lg={4}>
-            <RecentTransactions />
-          </Grid>
-          <Grid item xs={12} lg={8}>
-            <ProductPerformance />
-          </Grid>
-          <Grid item xs={12}>
-            <Blog />
-          </Grid>
-        </Grid>
+    <PageContainer title="Información" description="Una página con información del lugar">
+      <Box textAlign="center" mb={4} px={2}>
+        <Typography variant="h4" gutterBottom data-aos="fade-down">
+          Bienvenido a Canopy Monkey Jungle Zipline Adventure
+        </Typography>
+        <Typography variant="h6" color="text.secondary" data-aos="fade-down">
+          Descubre la aventura de tirolesa en Tamarindo, Guanacaste
+        </Typography>
       </Box>
-    </PageContainer>
-  )
-}
+      <Box mt={4} mb={4} textAlign="center" data-aos="fade-down">
+        <Carrousel></Carrousel>
+      </Box>
 
-export default Dashboard;
+      <Box mt={4} mb={4} data-aos="fade-down">
+        <GoogleReviews />
+      </Box>
+
+
+
+      <Container maxWidth="lg">
+        <Box mt={4} mb={4}>
+          <Typography variant="h5" gutterBottom data-aos="fade-down" textAlign="center">
+            Ubicación
+          </Typography>
+          <Box
+            sx={{
+              height: { xs: '300px', sm: '400px' },
+              width: '100%',
+              borderRadius: '15px',
+              overflow: 'hidden',
+            }}
+            data-aos="fade-up"
+          >
+            <Mapa />
+          </Box>
+          <Box mt={4} mb={4} textAlign="center">
+            <Typography variant="h5" gutterBottom data-aos="fade-down">
+              Diviértete tú también
+            </Typography>
+            <Box data-aos="fade-up" display="flex" justifyContent="center">
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/dJbbZYeqJTg"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{ borderRadius: '15px', maxWidth: '560px' }}
+              ></iframe>
+            </Box>
+          </Box>
+        </Box>
+
+      </Container>
+    </PageContainer>
+  );
+};
+
+export default SamplePage;
+

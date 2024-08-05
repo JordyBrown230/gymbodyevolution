@@ -1,12 +1,9 @@
 import {
-  IconAperture,
-  IconCopy,
   IconHome,
-  IconLayoutDashboard,
-  IconLogin,
-  IconMoodHappy,
-  IconTypography,
-  IconUserPlus,
+  IconInfoCircle,
+  IconMotorbike,
+  IconPhoto,
+  IconMail,
 } from "@tabler/icons-react";
 
 import { uniqueId } from "lodash";
@@ -18,57 +15,34 @@ const Menuitems = [
   },
   {
     id: uniqueId(),
-    title: "Inicio",
+    title: "Home",
     icon: IconHome,
     href: "/",
   },
   {
-    navlabel: true,
-    subheader: "Utilities",
+    id: uniqueId(),
+    title: "About Us",
+    icon: IconInfoCircle,
+    href: "#",
   },
   {
     id: uniqueId(),
-    title: "Typography",
-    icon: IconTypography,
-    href: "/utilities/typography",
+    title: "ATV",
+    description: "On an ATV you can discover the best routes in Guanacaste that you never thought you'd see. We have a fleet of ATV's HONDA",
+    icon: IconMotorbike,
+    href: "#",
   },
   {
     id: uniqueId(),
-    title: "Shadow",
-    icon: IconCopy,
-    href: "/utilities/shadow",
-  },
-  {
-    navlabel: true,
-    subheader: "Auth",
+    title: "Gallery",
+    icon: IconPhoto,
+    href: "#",
   },
   {
     id: uniqueId(),
-    title: "Login",
-    icon: IconLogin,
-    href: "/authentication/login",
-  },
-  {
-    id: uniqueId(),
-    title: "Register",
-    icon: IconUserPlus,
-    href: "/authentication/register",
-  },
-  {
-    navlabel: true,
-    subheader: "Extra",
-  },
-  {
-    id: uniqueId(),
-    title: "Icons",
-    icon: IconMoodHappy,
-    href: "/icons",
-  },
-  {
-    id: uniqueId(),
-    title: "Sample Page",
-    icon: IconAperture,
-    href: "/sample-page",
+    title: "Contact Us",
+    icon: IconMail,
+    href: "#",
   },
 ];
 

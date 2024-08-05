@@ -12,8 +12,8 @@ const baselightTheme = createTheme({
   direction: "ltr",
   palette: {
     primary: {
-      main: "#5D87FF",
-      light: "#ECF2FF",
+      main: "#5f6f52",
+      light: "#fefae0",
       dark: "#4570EA",
     },
     secondary: {
@@ -55,7 +55,7 @@ const baselightTheme = createTheme({
     },
     text: {
       primary: "#2A3547",
-      secondary: "#5A6A85",
+      secondary: "#5A6A85", 
     },
     action: {
       disabledBackground: "rgba(73,82,88,0.12)",
@@ -136,6 +136,13 @@ const baselightTheme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: "7px",
+        },
+      },
+    },
+    MuiDrawer: {
+      styleOverrides: {
+        paper: {
+          backgroundColor: "#163020",//background sidebar
         },
       },
     },
