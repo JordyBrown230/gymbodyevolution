@@ -45,7 +45,7 @@ function GetGoogleReviews() {
         <Box sx={{ mt: 2, maxWidth: '100%' }}>
             <Box display="flex" justifyContent="center" p={2}>
                 <Card sx={{ maxWidth: '100%', margin: 'auto' }}>
-                    <CardContent>
+                    <CardContent sx={{overflow:'auto', maxHeight:300}}>
                         <Box display="flex" justifyContent="space-between" mb={2}>
                             <Rating name="read-only" value={currentReview.rating} readOnly />
                             <FcGoogle size={30} />
