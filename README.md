@@ -17,5 +17,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 In case of NextJS cannot find a valid build in the '.next' directory when you are running next start after next build, do this:
+
+```bash
     1- npm run-script build
     2- npm run start
+```
