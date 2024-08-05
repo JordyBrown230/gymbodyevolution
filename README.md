@@ -19,6 +19,6 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 In case of NextJS cannot find a valid build in the '.next' directory when you are running next start after next build, do this:
 
 ```bash
-    1- npm run-script build
-    2- npm run start
+1- npm run-script build
+2- npm run start
 ```
