@@ -54,7 +54,11 @@ const Footer = () => {
                             <TextField label="Email" variant="outlined" fullWidth required />
                             <TextField label="Teléfono" variant="outlined" fullWidth required />
                             <TextField label="Mensaje" variant="outlined" fullWidth required multiline rows={4} />
-                            <Button variant="contained" color="primary" type="submit">
+                            <Button variant="contained" color="primary" type="submit" sx={{
+                                '&:hover': {
+                                    backgroundColor: '#6A0000', // Color que deseas en hover
+                                },
+                            }}>
                                 Enviar
                             </Button>
                         </Box>

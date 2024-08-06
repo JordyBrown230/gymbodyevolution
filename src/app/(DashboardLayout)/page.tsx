@@ -58,9 +58,11 @@ const SamplePage = () => {
           <Typography variant="h6" color="inherit" gutterBottom>
             Bienvenido a tu destino de bienestar definitivo. Explora nuestros recursos y consejos de expertos para embarcarte en un viaje transformador de salud y forma física.
           </Typography>
-          <Button variant="contained" color="primary" sx={{ mt: 3 }}>
-            Más información
-          </Button>
+            <Button variant="contained" color="primary" sx={{ mt: 3, '&:hover': {
+            backgroundColor: '#52796F', 
+        }, }}>
+              Más información
+            </Button>
         </Container>
       </Box>
 

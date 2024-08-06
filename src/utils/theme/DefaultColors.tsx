@@ -139,15 +139,15 @@ const baselightTheme = createTheme({
         },
       },
     },
-    MuiButton:{
-      styleOverrides: {
-        root: {
-          '&:hover': {
-            backgroundColor: "#6A0000", // Color del hover
-          },
-        },
-      },
-    },
+    // MuiButton:{
+    //   styleOverrides: {
+    //     root: {
+    //       '&:hover': {
+    //         backgroundColor: "#6A0000", // Color del hover
+    //       },
+    //     },
+    //   },
+    // },
     MuiDrawer: {
       styleOverrides: {
         paper: {
