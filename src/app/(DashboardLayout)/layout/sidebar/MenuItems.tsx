@@ -1,8 +1,8 @@
 import {
   IconHome,
-  IconInfoCircle,
-  IconMotorbike,
-  IconPhoto,
+  IconTag, // para promociones
+  IconCurrencyDollar, // para precios
+  IconUser, // para instructores
   IconMail,
 } from "@tabler/icons-react";
 
@@ -15,32 +15,31 @@ const Menuitems = [
   },
   {
     id: uniqueId(),
-    title: "Home",
+    title: "Inicio",
     icon: IconHome,
     href: "/",
   },
   {
     id: uniqueId(),
-    title: "About Us",
-    icon: IconInfoCircle,
+    title: "Promociones",
+    icon: IconTag,
     href: "#",
   },
   {
     id: uniqueId(),
-    title: "ATV",
-    description: "On an ATV you can discover the best routes in Guanacaste that you never thought you'd see. We have a fleet of ATV's HONDA",
-    icon: IconMotorbike,
+    title: "Precios",
+    icon: IconCurrencyDollar,
     href: "#",
   },
   {
     id: uniqueId(),
-    title: "Gallery",
-    icon: IconPhoto,
+    title: "Instructores",
+    icon: IconUser,
     href: "#",
   },
   {
     id: uniqueId(),
-    title: "Contact Us",
+    title: "Contáctanos",
     icon: IconMail,
     href: "#",
   },

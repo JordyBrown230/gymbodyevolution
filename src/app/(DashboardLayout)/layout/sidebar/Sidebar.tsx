@@ -37,7 +37,6 @@ const Sidebar = ({
               width: sidebarWidth,
               boxSizing: "border-box",
               borderTopRightRadius: "20px", 
-              borderBottomRightRadius: "20px", 
             },
           }}
         >

@@ -12,7 +12,7 @@ const baselightTheme = createTheme({
   direction: "ltr",
   palette: {
     primary: {
-      main: "#5f6f52",
+      main: "#8B0000",
       light: "#fefae0",
       dark: "#4570EA",
     },
@@ -139,14 +139,24 @@ const baselightTheme = createTheme({
         },
       },
     },
+    MuiButton:{
+      styleOverrides: {
+        root: {
+          '&:hover': {
+            backgroundColor: "#6A0000", // Color del hover
+          },
+        },
+      },
+    },
     MuiDrawer: {
       styleOverrides: {
         paper: {
-          backgroundColor: "#163020",//background sidebar
+          backgroundColor: "#1f1f1f",//background sidebar
         },
       },
     },
   },
+  
 });
 
 export { baselightTheme };

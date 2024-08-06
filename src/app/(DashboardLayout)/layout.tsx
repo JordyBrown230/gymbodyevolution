@@ -3,7 +3,7 @@ import { styled, Container, Box } from "@mui/material";
 import React, { useState } from "react";
 import Header from "@/app/(DashboardLayout)/layout/header/Header";
 import Sidebar from "@/app/(DashboardLayout)/layout/sidebar/Sidebar";
-
+import Footer from "./components/footer/footer"; // Asegúrate de que la ruta sea correcta
 
 const MainWrapper = styled("div")(() => ({
   display: "flex",
@@ -14,25 +14,20 @@ const MainWrapper = styled("div")(() => ({
 const PageWrapper = styled("div")(() => ({
   display: "flex",
   flexGrow: 1,
-  paddingBottom: "60px",
   flexDirection: "column",
   zIndex: 1,
   backgroundColor: "transparent",
+  paddingBottom: 0, // Asegúrate de que no haya padding en la parte inferior
 }));
 
 interface Props {
   children: React.ReactNode;
 }
 
-
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: Props) {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
   const [isMobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+
   return (
     <MainWrapper className="mainwrapper">
       {/* ------------------------------------------- */}
@@ -58,6 +53,7 @@ export default function RootLayout({
           sx={{
             paddingTop: "20px",
             maxWidth: "1200px",
+            flexGrow: 1,
           }}
         >
           {/* ------------------------------------------- */}
@@ -68,6 +64,10 @@ export default function RootLayout({
           {/* End Page */}
           {/* ------------------------------------------- */}
         </Container>
+        {/* ------------------------------------------- */}
+        {/* Footer */}
+        {/* ------------------------------------------- */}
+        <Footer />
       </PageWrapper>
     </MainWrapper>
   );
